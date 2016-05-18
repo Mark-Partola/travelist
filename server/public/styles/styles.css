@@ -1,0 +1,146 @@
+@import "../../../node_modules/normalize.css/normalize.css";
+@import "fonts.css";
+
+html, body {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+}
+
+.page-header {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #222;
+    height: 50px;
+    color: #eee;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.main-section {
+    height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+    background: rgba(0,0,0,.6);
+}
+
+.main-section__header {
+    color: #eee;
+    font-family: "RobotoCondensedRegular";
+    letter-spacing: 2px;
+    font-size: 40px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 100px;
+}
+
+.main-section__bgvideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -200;
+}
+
+.main-section__logo {
+    width: 200px;
+    display: block;
+    margin: 144px auto 0;
+}
+
+.type-navigation {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 520px;
+    height: 220px;
+}
+
+.type-navigation__logo {
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 168px;
+    display: block;
+}
+
+.type-navigation__item {
+    position: absolute;
+    color: #eee;
+    font-family: RobotoThin;
+    background-color: rgba(255,255,255,.1);
+    padding: 10px 34px;
+}
+
+.type-navigation__item:nth-child(1) {
+    top: 19px;
+    left: 64px;
+}
+.type-navigation__item:nth-child(2) {
+    top: 87px;
+    left: 0px;
+}
+.type-navigation__item:nth-child(3) {
+    top: -43px;
+    left: 142px;
+}
+.type-navigation__item:nth-child(4) {
+    top: 19px;
+    left: 339px;
+}
+.type-navigation__item:nth-child(5) {
+    top: 87px;
+    left: 383px;
+}
+.type-navigation__item:nth-child(6) {
+    top: 19px;
+    left: 23px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.about__item {
+    color: #eee;
+    font-family: RobotoThin;
+    flex-basis: 30%;
+    flex-grow: 1;
+    margin: 0 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.about__header {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.about__img {
+    width: 90px;
+    height: 90px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.about__desc {
+    font-size: 12px;
+}
