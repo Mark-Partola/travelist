@@ -1,5 +1,5 @@
 import Sequelize from 'sequelize';
-import configFull from './../../config/config';
+import configFull from '../config/config';
 
 const config = (process.env.NODE_ENV)
             ? configFull.development

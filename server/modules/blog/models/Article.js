@@ -1,4 +1,4 @@
-import BaseModel from './BaseModel';
+import BaseModel from './../../../engine/BaseModel';
 
 class Article extends BaseModel {
     constructor () {
