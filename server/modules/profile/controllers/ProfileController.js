@@ -7,8 +7,8 @@ class FrontController {
     }
 
     getProfile (req, res) {
-        console.log(req.params.name);
         res.render(this._viewPath + '/profile', {
+            username: req.params.name,
             layout: this._viewPath + '/index'
         });
     }

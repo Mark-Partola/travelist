@@ -1,12 +1,6 @@
 import express from 'express';
-import FrontController from './modules/frontal/controllers/FrontController';
-import BlogController from './modules/blog/controllers/BlogController';
-import ProfileController from './modules/profile/controllers/ProfileController';
 
-let frontController = new FrontController(),
-    blogController = new BlogController(),
-    profileController = new ProfileController(),
-    app = express();
+const app = express();
 
 global.config = {
     path: __dirname
@@ -26,11 +20,11 @@ app.use('/public', express.static(config.path + '/public'));
 app.use('/node_modules', express.static(config.path + '/../node_modules'));
 
 /**
- * Роутинг
+ * Роутер
  */
-app.get('/', frontController.getIndex.bind(frontController));
-app.get('/posts', blogController.getArticles.bind(blogController));
-app.get('/user/:name', profileController.getProfile.bind(profileController));
+import Router from './router';
+const router = new Router(app);
+router.start();
 
 app.listen(3000, function () {
     console.log('Server is running on localhost:3000');

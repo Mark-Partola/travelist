@@ -1,4 +1,11 @@
+import path from 'path';
+
 module.exports = {
+    common: {
+        local: {
+            rootPath : path.resolve(__dirname + '/..')
+        }
+    },
     development: {
         db: {
             dbname : 'travelist',
