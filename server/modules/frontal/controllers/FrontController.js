@@ -3,10 +3,13 @@ import path from 'path';
 class FrontController {
     constructor () {
         console.log('front controller');
+        this._viewPath = path.resolve(__dirname + '/../views');
     }
 
     getIndex (req, res) {
-        res.sendFile(path.resolve(__dirname + './../views/index.hbs'));
+        res.render(this._viewPath + '/blog', {
+            layout: false
+        });
     }
 }
 
