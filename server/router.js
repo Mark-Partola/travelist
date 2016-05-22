@@ -4,9 +4,10 @@ import path from 'path';
 const cache = {};
 
 class Router {
-    constructor(app, options) {
+    constructor(app, options = {}) {
         this._app = app;
         this._options = options;
+
         this._routes = {
             '/' : {
                 module: 'frontal',
@@ -43,6 +44,8 @@ class Router {
     }
 
     _loader(routeConfig) {
+        let instance;
+
         return (req, res) => {
             const ctrl = require(path.join(
                 config.common.local.rootPath,
@@ -52,11 +55,17 @@ class Router {
                 routeConfig.controller
             ));
 
-            if (!cache[ctrl]) {
-                cache[ctrl] = new ctrl;
+            if (this._options.cache) {
+                if (!cache[ctrl]) {
+                    cache[ctrl] = new ctrl;
+                }
+
+                instance = cache[ctrl];
+            } else {
+                instance = new ctrl;
             }
 
-            cache[ctrl][routeConfig.action](req, res);
+            instance[routeConfig.action](req, res);
         }
     }
 };

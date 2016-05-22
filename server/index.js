@@ -23,7 +23,9 @@ app.use('/node_modules', express.static(config.path + '/../node_modules'));
  * Роутер
  */
 import Router from './router';
-const router = new Router(app);
+const router = new Router(app, {
+    cache: true
+});
 router.start();
 
 app.listen(3000, function () {
