@@ -1,30 +1,27 @@
-var webpack = require("webpack");
-var path = require("path");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  entry: "./app/app.js",
-  output: {
-    path: path.join(__dirname, "assets"),
-    filename: "main.js",
-  },
-
-  module: {
-    loaders: [
-        {
-            test: /\.scss$/,
-            loaders: ["style", "css", "sass"]
-        }
+    entry: [
+        "./app/app.js",
+        "./app/scss/index.scss"
     ],
+    output: {
+        filename: "./assets/bundle.js"
+    },
 
-    preLoaders: [
-      {
-        test: /\.js$/,
-        include: pathToRegExp(path.join(__dirname, "app")),
-        loader: "jshint-loader"
-      },
+    module: {
+        loaders: [
+            {
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract(
+                    "style-loader",
+                    "css-loader!sass-loader"
+                )
+            }
+        ]
+    },
+
+    plugins: [
+        new ExtractTextPlugin("./assets/bundle.css")
     ]
-  },
-  
 };
-function escapeRegExpString(str) { return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&"); }
-function pathToRegExp(p) { return new RegExp("^" + escapeRegExpString(p)); }
