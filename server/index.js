@@ -6,6 +6,8 @@ global.config = {
     path: __dirname
 };
 
+import path from 'path';
+
 /**
  * Шаблонизатор
  */
@@ -22,9 +24,10 @@ app.use('/node_modules', express.static(config.path + '/../node_modules'));
 /**
  * Роутер
  */
-import Router from './router';
+import Router from './engine/Router';
 const router = new Router(app, {
-    cache: true
+    cache: true,
+    routesPath: path.resolve(__dirname + '/config/routes')
 });
 router.start();
 

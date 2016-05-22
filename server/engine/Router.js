@@ -1,4 +1,4 @@
-import config from './config/config';
+import config from './../config/config';
 import path from 'path';
 
 const cache = {};
@@ -8,26 +8,7 @@ class Router {
         this._app = app;
         this._options = options;
 
-        this._routes = {
-            '/' : {
-                module: 'frontal',
-                method: 'get',
-                controller: 'FrontController',
-                action: 'getIndex'
-            },
-            '/posts' : {
-                module: 'blog',
-                method: 'get',
-                controller: 'BlogController',
-                action: 'getArticles'
-            },
-            '/user/:name' : {
-                module: 'profile',
-                method: 'get',
-                controller: 'ProfileController',
-                action: 'getProfile'
-            }
-        }
+        this._routes = require(options.routesPath);
     }
 
     start() {
@@ -61,7 +42,7 @@ class Router {
                 }
 
                 instance = cache[ctrl];
-            } else {
+            } else { 
                 instance = new ctrl;
             }
 
