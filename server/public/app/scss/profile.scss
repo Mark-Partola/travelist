@@ -19,19 +19,59 @@ body {
 
 .profile-head {
   display: flex;
-  height: 400px;
+  height: 519px;
   border-bottom: 1px solid #ddd;
+  position: relative;
 
-  &__avatar {
-    width: 200px;
+  &__user {
+    position: absolute;
+    bottom: 77px;
+    left: 379px;
+    z-index: 1;
   }
 }
 
 .avatar {
+  width: 120px;
+  height: 120px;
   overflow: hidden;
+  border-radius: 100%;
+  border: 1px solid #ddd;
 
   img {
     width: 100%;
+  }
+}
+
+.user-card {
+  &__name {
+    margin-top: 5px;
+    text-align: center;
+    font-family: RobotoThin;
+    font-size: 17px;
+    color: #fff;
+  }
+}
+
+.user-counter {
+  position: absolute;
+  bottom: 72px;
+  left: 573px;
+  z-index: 1;
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+
+  &__item {
+    color: #fff;
+    font-family: RobotoThin;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+  &__header {
+    font-size: 38px;
+    font-family: RobotoCondensedRegular;
   }
 }
 
@@ -53,9 +93,15 @@ body {
   
   div {
     background-color: #ccc;
-    background-color: #ccc;
     flex-grow: 1;
+    width: 20px;
     margin-right: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+
+    img {
+      width: 100%;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -66,3 +112,12 @@ body {
 .profile-content {
 
 }
+
+.profile-head__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+//#485566 #616D7C - карта
