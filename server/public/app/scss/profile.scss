@@ -19,52 +19,67 @@ body {
 
 .profile-head {
   display: flex;
+  justify-content: space-between;
   height: 519px;
   border-bottom: 1px solid #ddd;
   position: relative;
 
-  &__user {
-    position: absolute;
-    bottom: 77px;
-    left: 379px;
-    z-index: 1;
+  &__user {}
+  &__bg {}
+}
+
+.user-card {
+  width: 300px;
+  background: #444;
+  padding-top: 40px;
+
+  &__name {
+    margin-top: 15px;
+    text-align: center;
+    font-family: RobotoCondensedRegular, sans-serif;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  &__subscribe {
+    border: 1px solid #616D7C;
+    background-color: #485566;
+    border-radius: 3px;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10px;
+    color: #eee;
+    font-family: RobotoThin;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
   }
 }
 
 .avatar {
-  width: 120px;
-  height: 120px;
+  margin: 0 auto;
+  width: 130px;
+  height: 130px;
   overflow: hidden;
   border-radius: 100%;
-  border: 1px solid #ddd;
+  border: 2px solid #fff;
 
   img {
     width: 100%;
   }
 }
 
-.user-card {
-  &__name {
-    margin-top: 5px;
-    text-align: center;
-    font-family: RobotoThin;
-    font-size: 17px;
-    color: #fff;
-  }
-}
-
 .user-counter {
-  position: absolute;
-  bottom: 72px;
-  left: 573px;
-  z-index: 1;
   display: flex;
-  width: 150px;
-  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 50px;
+  justify-content: space-around;
 
   &__item {
     color: #fff;
-    font-family: RobotoThin;
+    font-family: RobotoThin, sans-serif;
     margin-bottom: 5px;
     font-size: 16px;
   }
@@ -72,6 +87,20 @@ body {
   &__header {
     font-size: 38px;
     font-family: RobotoCondensedRegular;
+  }
+}
+
+.user-achievements {
+  color: #fff;
+  font-size: 20px;
+  font-family: RobotoCondensedRegular;
+  text-align: center;
+  margin-top: 85px;
+
+  &__header {
+    font-family: RobotoThin;
+    font-size: 15px;
+    margin-bottom: 5px;
   }
 }
 
@@ -108,16 +137,3 @@ body {
     }
   }
 }
-
-.profile-content {
-
-}
-
-.profile-head__bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-}
-
-//#485566 #616D7C - карта
