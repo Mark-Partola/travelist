@@ -11,15 +11,13 @@ body {
 }
 
 .l-layout {
-  width: 1024px;
   height: 100%;
-  margin: 0 auto;
   background-color: #fff;
+  width: 1060px;
+  margin: 0 auto;
 }
 
 .profile-head {
-  display: flex;
-  justify-content: space-between;
   height: 519px;
   border-bottom: 1px solid #ddd;
   position: relative;
@@ -29,7 +27,8 @@ body {
 }
 
 .user-card {
-  width: 300px;
+  float: right;
+  width: 260px;
   background: #444;
   padding-top: 40px;
 
