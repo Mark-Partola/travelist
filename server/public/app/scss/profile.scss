@@ -18,17 +18,23 @@ body {
 }
 
 .profile-head {
-  height: 519px;
-  border-bottom: 1px solid #ddd;
+  height: 560px;
+  overflow: hidden;
   position: relative;
 
-  &__user {}
+  &__user {
+    float: right;
+    width: 260px;
+  }
   &__bg {}
+  &__wrapper {
+    width: 800px;
+    float: left;
+  }
 }
 
 .user-card {
-  float: right;
-  width: 260px;
+  height: 100%;
   background: #444;
   padding-top: 40px;
 
@@ -103,29 +109,18 @@ body {
   }
 }
 
-.profile-description {
-  flex-grow: 1;
-  font-family: RobotoCondensedRegular, sans-serif;
-  font-size: 20px;
-  margin: 0 10px;
-
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-
 .profile-catalog {
   display: flex;
   justify-content: space-between;
-  height: 100px;
+  overflow: hidden;
+  height: 145px;
   
-  div {
-    background-color: #ccc;
+  &__preview {
+    display: flex;
     flex-grow: 1;
     width: 20px;
-    margin-right: 5px;
+    margin-right: 1px;
     overflow: hidden;
-    margin-top: 10px;
 
     img {
       width: 100%;
@@ -134,5 +129,21 @@ body {
     &:last-child {
       margin-right: 0;
     }
+  }
+}
+
+.preview {
+  position: relative;
+  cursor: pointer;
+
+  &__info {
+    position: absolute;
+    color: #fff;
+    background-color: rgba(0,0,0,.5);
+    padding: 3px;
+    font-size: 10px;
+    font-family: RobotoThin;
+    top: 5px;
+    right: 5px;
   }
 }
