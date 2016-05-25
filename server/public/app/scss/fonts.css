@@ -11,3 +11,10 @@
     font-style: normal;
     font-weight: normal;
 }
+
+@font-face {
+    font-family: "RobotoRegular";
+    src: url("/public/assets/fonts/Roboto/Roboto-Regular.ttf");
+    font-style: normal;
+    font-weight: normal;
+}

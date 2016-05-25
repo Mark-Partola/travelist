@@ -1,4 +1,5 @@
-@import "./../../../../node_modules/normalize.css/normalize.css";
+@import "~/node_modules/normalize.css/normalize.css";
+@import "~/node_modules/font-awesome/css/font-awesome.css";
 @import "fonts.css";
 
 html, body {
@@ -140,10 +141,55 @@ body {
     position: absolute;
     color: #fff;
     background-color: rgba(0,0,0,.5);
-    padding: 3px;
-    font-size: 10px;
-    font-family: RobotoThin;
+    padding: 3px 5px;
+    font-size: 12px;
+    font-family: RobotoRegular, sans-serif;
     top: 5px;
     right: 5px;
+  }
+
+  &__title {
+    position: absolute;
+    color: #fff;
+    font-family: RobotoThin;
+    background-color: rgba(0,0,0,.5);
+    padding: 5px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+
+    transition: .3s bottom;
+  }
+
+  &__description {
+    position: absolute;
+    color: #fff;
+    font-size: 10px;
+    font-family: RobotoRegular;
+    background-color: rgba(0,0,0,.5);
+    padding: 5px;
+    text-align: justify;
+    height: 50%;
+    overflow: hidden;
+    bottom: -50%;
+    box-sizing: border-box;
+
+    transition: .3s bottom;
+  }
+
+  &__icon {
+    margin-left: 5px;
+    color: #fff;
+    font-size: 15px;
+    vertical-align: bottom;
+  }
+
+  &:hover &__description {
+    bottom: 0;
+  }
+
+  &:hover &__title {
+    bottom: 50%;
   }
 }

@@ -1,16 +1,25 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var path = require('path');
 
-ProfileExtract = new ExtractTextPlugin('./assets/css/profile.css');
-BlogExtract = new ExtractTextPlugin('./assets/css/blog.css');
+ProfileExtract = new ExtractTextPlugin('./server/public/assets/css/profile.css');
+BlogExtract = new ExtractTextPlugin('./server/public/assets/css/blog.css');
 
 module.exports = {
     entry: [
-        "./app/app.js",
-        "./app/scss/profile.scss",
-        "./app/scss/blog.scss"
+        "./server/public/app/app.js",
+        "./server/public/app/scss/profile.scss",
+        "./server/public/app/scss/blog.scss"
     ],
     output: {
-        filename: "./assets/bundle.js"
+        filename: "./server/public/assets/bundle.js"
+    },
+
+    resolve: {
+        root: [
+            path.resolve(__dirname + '/server/public/app'),
+            path.join(__dirname, 'node_modules')
+        ],
+        extensions: ['', '.js', '.css']
     },
 
     module: {
