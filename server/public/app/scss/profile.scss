@@ -290,3 +290,26 @@ body {
     margin-bottom: 10px;
   }
 }
+
+.article-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__info {
+    font-family: RobotoThin, sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 5px;
+  }
+  
+  &__icon {
+    color: #999;
+
+    &--align-top {
+      vertical-align: top;
+    }
+  }
+}
