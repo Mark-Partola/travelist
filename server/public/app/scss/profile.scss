@@ -13,7 +13,6 @@ body {
 
 .l-layout {
   height: 100%;
-  background-color: #fff;
   width: 1060px;
   margin: 0 auto;
 }
@@ -22,6 +21,7 @@ body {
   height: 560px;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
 
   &__user {
     float: right;
@@ -192,4 +192,42 @@ body {
   &:hover &__title {
     bottom: 50%;
   }
+}
+
+.content-area {
+  display: flex;
+  margin-top: 15px;
+
+  &__sidebar {
+    width: 180px;
+    margin-right: 15px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+  }
+
+  &__content {
+    width: 800px;
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+
+    font-family: RobotoRegular;
+  }
+}
+
+.wall {
+  &__toolbar {
+    height: 32px;
+    background-color: #f4f4f4;
+    border: 1px solid #e8e8e8;
+  }
+  &__message {
+    height: 50px;
+    background-color: #f4f4f4;
+    border: 1px solid #e8e8e8;
+    margin-top: 10px;
+  }
+  &__items {}
 }
