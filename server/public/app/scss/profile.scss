@@ -234,7 +234,9 @@ body {
     margin-top: 10px;
     padding: 5px;
   }
-  &__items {}
+  &__items {
+    margin-top: 10px;
+  }
 }
 
 .message-form {
@@ -269,5 +271,22 @@ body {
     &:hover {
       background-color: darken(#616D7C, 10%);
     }
+  }
+}
+
+.articles {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &--blocks {}
+  &--lines {}
+
+  &__item {
+    height: 200px;
+    background-color: #f4f4f4;
+    border: 1px solid #e8e8e8;
+    width: 197px;
+    margin-bottom: 10px;
   }
 }
