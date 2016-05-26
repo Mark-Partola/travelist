@@ -52,10 +52,10 @@ body {
     background-color: #485566;
     border-radius: 3px;
     width: 70%;
-    margin: 0 auto;
-    margin-top: 10px;
+    margin: 10px auto 0;
     color: #eee;
-    font-family: RobotoThin;
+    font-family: RobotoThin, sans-serif;
+    font-weight: 200;
     text-transform: uppercase;
     font-size: 12px;
     text-align: center;
@@ -78,33 +78,36 @@ body {
 
 .user-counter {
   display: flex;
-  margin: 0 auto;
   width: 90%;
-  margin-top: 50px;
+  margin: 50px auto 0;
   justify-content: space-around;
 
   &__item {
     color: #fff;
     font-family: RobotoThin, sans-serif;
+    font-weight: 200;
     margin-bottom: 5px;
     font-size: 16px;
   }
 
   &__header {
     font-size: 38px;
-    font-family: RobotoCondensedRegular;
+    font-family: RobotoCondensedRegular, sans-serif;
+    font-weight: 300;
   }
 }
 
 .user-achievements {
   color: #fff;
   font-size: 20px;
-  font-family: RobotoCondensedRegular;
+  font-family: RobotoCondensedRegular, sans-serif;
+  font-weight: 300;
   text-align: center;
   margin-top: 85px;
 
   &__header {
-    font-family: RobotoThin;
+    font-family: RobotoThin, sans-serif;
+    font-weight: 200;
     font-size: 15px;
     margin-bottom: 5px;
   }
@@ -151,7 +154,8 @@ body {
   &__title {
     position: absolute;
     color: #fff;
-    font-family: RobotoThin;
+    font-family: RobotoThin, sans-serif;
+    font-weight: 200;
     background-color: rgba(0,0,0,.5);
     padding: 5px;
     bottom: 0;
@@ -166,7 +170,7 @@ body {
     position: absolute;
     color: #fff;
     font-size: 10px;
-    font-family: RobotoRegular;
+    font-family: RobotoRegular, sans-serif;
     background-color: rgba(0,0,0,.5);
     padding: 5px;
     text-align: justify;
@@ -213,7 +217,8 @@ body {
     background-color: #fff;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
 
-    font-family: RobotoRegular;
+    font-family: RobotoRegular, sans-serif;
+    font-weight: 300;
   }
 }
 
@@ -224,10 +229,45 @@ body {
     border: 1px solid #e8e8e8;
   }
   &__message {
-    height: 50px;
     background-color: #f4f4f4;
     border: 1px solid #e8e8e8;
     margin-top: 10px;
+    padding: 5px;
   }
   &__items {}
+}
+
+.message-form {
+  display: flex;
+
+  &__textarea {
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid #e8e8e8;
+    outline: none;
+    font-family: RobotoRegular, sans-serif;
+    font-weight: 300;
+    color: #444;
+    padding: 10px 5px;
+    font-size: 14px;
+    width: 80%;
+    margin-right: 5px;
+  }
+
+  &__button {
+    flex-grow: 1;
+    border: 1px solid #e8e8e8;
+    background-color: #616D7C;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: RobotoThin, sans-serif;
+    font-weight: 200;
+    cursor: pointer;
+    outline: none;
+    transition: background-color .2s;
+
+    &:hover {
+      background-color: darken(#616D7C, 10%);
+    }
+  }
 }
