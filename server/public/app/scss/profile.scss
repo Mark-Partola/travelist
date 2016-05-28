@@ -2,6 +2,8 @@
 @import "~/node_modules/font-awesome/css/font-awesome.css";
 @import "fonts.css";
 
+$mainColor: #49b;
+
 html, body {
   height: 100vh;
 }
@@ -13,8 +15,9 @@ body {
 
 .page-header-wrapper {
   height: 50px;
-  background-color: #49b;
+  background-color: $mainColor;
   margin-bottom: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
 }
 
 .page-header {
@@ -37,8 +40,7 @@ body {
   height: 560px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
-  background-image: url(http://tyme.ru/img/geo_bg.jpg);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
 
   &__user {
     float: right;
@@ -71,12 +73,12 @@ body {
   }
 
   &__subscribe {
-    border: 1px solid #616D7C;
-    background-color: #485566;
+    border: 1px solid lighten($mainColor, 20%);
+    background-color: $mainColor;
     border-radius: 3px;
     width: 70%;
     margin: 10px auto 0;
-    color: #eee;
+    color: #fff;
     font-family: RobotoThin, sans-serif;
     font-weight: 200;
     text-transform: uppercase;
@@ -223,22 +225,19 @@ body {
 
 .content-area {
   display: flex;
-  margin-top: 15px;
+  margin-top: 10px;
 
   &__sidebar {
     width: 180px;
-    margin-right: 15px;
+    margin-right: 10px;
     padding: 10px;
     background-color: #fff;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
   }
 
   &__content {
     width: 800px;
     flex-grow: 1;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
 
     font-family: RobotoRegular, sans-serif;
     font-weight: 300;
@@ -246,6 +245,11 @@ body {
 }
 
 .wall {
+  &__wrapper {
+	padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
   &__toolbar {
     height: 32px;
     background-color: #f4f4f4;
@@ -298,18 +302,10 @@ body {
 }
 
 .articles {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  &--blocks {}
-  &--lines {}
 
   &__item {
     height: 200px;
-    background-color: #f4f4f4;
     border: 1px solid #e8e8e8;
-    width: 197px;
     margin-bottom: 10px;
   }
 }
@@ -327,6 +323,8 @@ body {
     justify-content: space-between;
     padding: 3px 5px;
   }
+  
+  &__text {}
   
   &__icon {
     color: #999;
