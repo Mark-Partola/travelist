@@ -2,7 +2,7 @@
 @import "~/node_modules/font-awesome/css/font-awesome.css";
 @import "fonts.css";
 
-$mainColor: #49b;
+$mainColor: #6bd;
 
 html, body {
   height: 100vh;
@@ -95,6 +95,13 @@ body {
   overflow: hidden;
   border-radius: 100%;
   border: 2px solid #fff;
+  
+  &--article {
+	width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+  }
 
   img {
     width: 100%;
@@ -128,7 +135,7 @@ body {
   font-family: RobotoCondensedRegular, sans-serif;
   font-weight: 300;
   text-align: center;
-  margin-top: 85px;
+  margin-top: 120px;
 
   &__header {
     font-family: RobotoThin, sans-serif;
@@ -285,8 +292,8 @@ body {
 
   &__button {
     flex-grow: 1;
-    border: 1px solid #e8e8e8;
-    background-color: #616D7C;
+    border: none;
+    background-color: $mainColor;
     box-sizing: border-box;
     color: #fff;
     font-family: RobotoThin, sans-serif;
@@ -296,7 +303,8 @@ body {
     transition: background-color .2s;
 
     &:hover {
-      background-color: darken(#616D7C, 10%);
+      background-color: darken($mainColor, 3%);
+	  padding-top: 3px;
     }
   }
 }
@@ -304,7 +312,6 @@ body {
 .articles {
 
   &__item {
-    height: 200px;
     border: 1px solid #e8e8e8;
     margin-bottom: 10px;
   }
@@ -312,25 +319,73 @@ body {
 
 .article-preview {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  
+  &__author {
+	width: 100px;
+    font-size: 14px;
+    margin-right: 10px;
+    overflow: hidden;
+    color: #666;
+	font-family: RobotoThin, sans-serif;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  &__article {
+    flex-grow: 1;
+	flex-basis: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+  }
+  
+  &__header {
+	display: flex;
+	justify-content: space-between;
+  }
+  
+  &__title {
+    font-family: RobotoThin;
+    color: $mainColor;
+    font-size: 23px;
+    font-weight: 600;
+  }
 
   &__info {
-    font-family: RobotoThin, sans-serif;
+    font-family: RobotoCondensedRegular, sans-serif;
     font-weight: 200;
     font-size: 14px;
     display: flex;
     justify-content: space-between;
-    padding: 3px 5px;
+    color: #777;
+	margin-left: 10px;
   }
   
-  &__text {}
+  &__text {
+    margin: 15px 0;
+    color: #666;
+    font-family: RobotoRegular, sans-serif;
+    line-height: 1.5em;
+    border-left: 1px dashed #6ac;
+    margin-left: 10px;
+    padding: 10px 20px;
+  }
   
-  &__icon {
+  &__comment {
+	cursor: pointer;
+	margin: 0 10px;
+  }
+  
+  &__counter {
+    font-family: RobotoCondensedRegular, sans-serif;
+    cursor: pointer;
     color: #999;
-
-    &--align-top {
-      vertical-align: top;
-    }
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  
+  &__link {
+	color: $mainColor;
   }
 }
