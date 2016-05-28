@@ -11,6 +11,22 @@ body {
   box-sizing: border-box;
 }
 
+.page-header-wrapper {
+  height: 50px;
+  background-color: #49b;
+  margin-bottom: 10px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  color: #fff;
+  font-family: RobotoRegular;
+  font-size: 15px;
+}
+
 .l-layout {
   height: 100%;
   width: 1060px;
@@ -28,7 +44,13 @@ body {
     float: right;
     width: 260px;
   }
-  &__bg {}
+
+  &__bg {
+	background-image: url(http://tyme.ru/img/geo_bg.jpg);
+	width: 800px;
+	height: 412px;
+  }
+
   &__wrapper {
     width: 800px;
     float: left;
