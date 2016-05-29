@@ -53,6 +53,7 @@
 
 .timeline-content {
 	flex-grow: 1;
+	flex-basis: 10px;
 	position: relative;
 
 	&--left {
@@ -67,7 +68,7 @@
 .timeline-article {
 	height: 200px;
 	background-color: #ccc;
-	margin-top: 20px;
+	margin-top: 25px;
 
 	position: relative;
 	width: 96.5%;
@@ -116,8 +117,8 @@
 
 	&__hook-title {
 		position: absolute;
-		top: -13px;
-		height: 13px;
+		top: -15px;
+		height: 15px;
 		width: 150px;
 		font-size: 10px;
 		font-family: RobotoRegular, sans-serif;
@@ -131,5 +132,24 @@
 		top: -5px;
 		background-color: $mainColor;
 		border-radius: 100%;
+	}
+
+	&__content {
+		height: 100%;
+		background-image: url(http://dreempics.com/img/picture/Apr/30/9fb5fbf60488b5031dfcde2afbeb50cd/8.jpg);
+		background-size: cover;
+	}
+}
+
+.blog-article-preview {
+	overflow: hidden;
+
+	&__title {
+		color: #fff;
+		font-family: RobotoCondensedRegular, sans-serif;
+		font-size: 25px;
+		background-color: rgba(0,0,0,0.5);
+		margin: 25px 0 0 20px;
+		padding: 5px 15px;
 	}
 }
