@@ -1,40 +1,5 @@
-@import "~/node_modules/normalize.css/normalize.css";
-@import "~/node_modules/font-awesome/css/font-awesome.css";
-@import "fonts.css";
-
-$mainColor: #6bd;
-
-html, body {
-  height: 100vh;
-}
-
-body {
-  background: #f4f4f4;
-  box-sizing: border-box;
-}
-
-.page-header-wrapper {
-  height: 50px;
-  background-color: $mainColor;
-  margin-bottom: 10px;
-  box-shadow: 0 1px 2px rgba(0,0,0,.1);
-}
-
-.page-header {
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-  align-items: center;
-  color: #fff;
-  font-family: RobotoRegular;
-  font-size: 15px;
-}
-
-.l-layout {
-  height: 100%;
-  width: 1060px;
-  margin: 0 auto;
-}
+@import './common/base.scss';
+@import './blocks/page-header.scss';
 
 .profile-head {
   height: 560px;
