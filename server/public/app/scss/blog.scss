@@ -6,6 +6,7 @@
     justify-content: space-between;
 	
 	&__sidebar {
+		flex-basis: 10px;
 		padding: 10px;
 		background-color: #fff;
 		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -14,10 +15,52 @@
 	}
 	
 	&__main-area {
+		flex-basis: 10px;
 		padding: 10px;
 		background-color: #fff;
 		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 		flex-grow: 1;
 		margin-left: 5px;
+	}
+}
+
+.l-blog-layout {
+	display: flex;
+    justify-content: space-between;
+	margin-top: 10px;
+	
+	&__sidebar {
+		flex-basis: 200px;
+		background-color: #fff;
+		margin-right: 10px;
+		
+		padding: 10px;
+		background-color: #fff;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	}
+	
+	&__content {
+		flex-grow: 1;
+		
+		padding: 10px;
+		background-color: #fff;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	}
+}
+
+.blog-content {
+	height: 500px;
+    display: flex;
+}
+
+.timeline-content {
+	flex-grow: 1;
+
+	&--left {
+		border-right: 1px solid $mainColor;
+	}
+	
+	&--right {
+	
 	}
 }
