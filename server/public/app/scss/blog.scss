@@ -179,3 +179,26 @@
 		width: 165px;
 	}
 }
+
+.blog-side-widget {
+	margin-bottom: 20px;
+
+	&__header {
+		font-family: RobotoCondensedRegular, sans-serif;
+		margin-bottom: 5px;
+		color: #595959;
+		padding: 20px;
+		font-size: 24px;
+		line-height: 1;
+		border-bottom: 1px solid #E1E1E1;
+	}
+
+	&__item {
+		color: #555;
+		font-family: RobotoCondensedRegular, sans-serif;
+		padding: 10px;
+		background-color: #f8f8f8;
+		font-size: 13px;
+		line-height: 17px;
+	}
+}
