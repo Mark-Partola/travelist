@@ -55,12 +55,14 @@ class Router {
 	_registerErrors() {
 		this._app.use((req, res) => {
 			res.status(404);
+			global.config.logger.log({ module }).info('Error 404');
 			res.send({ error: 'Not found' });
 			return;
 		});
 		
 		this._app.use((err, req, res) => {
 			res.status(err.status || 500);
+			global.config.logger.log({ module }).info('Error 500');
 			res.send({ error: err.message });
 			return;
 		});

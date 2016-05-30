@@ -2,8 +2,11 @@ const express = require('express');
 
 const app = express();
 
+const Logger = require('./engine/Logger');
+
 global.config = {
-    path: __dirname
+    path: __dirname,
+	logger: new Logger({})
 };
 
 const path = require('path');

@@ -15,7 +15,8 @@
     "font-awesome": "^4.6.3",
     "mysql": "^2.10.2",
     "normalize.css": "^4.1.1",
-    "sequelize": "^3.23.0"
+    "sequelize": "^3.23.0",
+    "winston": "^2.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.8.0",
