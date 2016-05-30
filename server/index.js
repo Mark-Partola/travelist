@@ -1,4 +1,4 @@
-import express from 'express';
+const express = require('express');
 
 const app = express();
 
@@ -6,12 +6,12 @@ global.config = {
     path: __dirname
 };
 
-import path from 'path';
+const path = require('path');
 
 /**
  * Шаблонизатор
  */
-import exphbs from 'express-handlebars';
+const exphbs = require('express-handlebars');
 app.engine('.hbs', exphbs({defaultLayout: 'common', extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
@@ -24,11 +24,13 @@ app.use('/node_modules', express.static(config.path + '/../node_modules'));
 /**
  * Роутер
  */
-import Router from './engine/Router';
+const Router = require('./engine/Router');
+
 const router = new Router(app, {
     cache: true,
     routesPath: path.resolve(__dirname + '/config/routes')
 });
+
 router.start();
 
 app.listen(3000, function () {
