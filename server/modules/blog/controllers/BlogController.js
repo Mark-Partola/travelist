@@ -11,6 +11,12 @@ class BlogController {
 			layout: this._viewPath + '/index'
 		});
     }
+
+    getArticle (req, res) {
+        res.render(this._viewPath + '/article', {
+            layout: this._viewPath + '/index'
+        })
+    }
 }
 
 module.exports = BlogController;

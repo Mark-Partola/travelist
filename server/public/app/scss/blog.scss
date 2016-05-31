@@ -258,3 +258,59 @@
 		outline: none;
 	}
 }
+
+.l-page-article {
+	display: flex;
+
+	&__sidebar {
+		width: 300px;
+		flex-basis: 300px;
+	}
+}
+
+.article-header {
+	margin-right: 10px;
+	flex-grow: 1;
+
+	&__title {
+		font-family: RobotoRegular, sans-serif;
+		font-size: 25px;
+		text-align: center;
+		margin-top: 20px;
+		color: #555;
+	}
+
+	&__author {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 20px;
+	}
+
+	&__info {
+		margin-left: 10px;
+		color: #555;
+		font-family: RobotoRegular, sans-serif;
+		font-size: 14px;
+
+		&--small {
+			font-size: 11px;
+		}
+	}
+
+	&__tags {
+		display: flex;
+		justify-content: center;
+		margin-top: 20px;
+
+		span {
+			border: 1px solid #ddd;
+			padding: 3px 8px;
+			font-size: 11px;
+			font-family: RobotoCondensedRegular, sans-serif;
+			margin-right: 5px;
+			border-radius: 3px;
+			text-transform: lowercase;
+		}
+	}
+}
