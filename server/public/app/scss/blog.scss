@@ -271,6 +271,7 @@
 .article-header {
 	margin-right: 10px;
 	flex-grow: 1;
+	width: 888px;
 
 	&__title {
 		font-family: RobotoRegular, sans-serif;
@@ -312,5 +313,19 @@
 			border-radius: 3px;
 			text-transform: lowercase;
 		}
+	}
+}
+
+.article-content {
+	margin-top: 50px;
+
+	p {
+		font-size: 16px;
+		line-height: 1.5em;
+		font-family: RobotoRegular, sans-serif;
+		color: #555;
+		text-indent: 15px;
+		text-align: justify;
+		margin: 20px 10px;
 	}
 }
