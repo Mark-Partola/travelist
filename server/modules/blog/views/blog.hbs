@@ -13,16 +13,22 @@
 
 <div class="l-layout">
 	<div class="blog-header">
-		<div class="blog-header__sidebar">left</div>
-		<div class="blog-header__main-area">right</div>
+        <div class="blog-header-widget">
+            <div class="blog-header-widget__item">Жизнь</div>
+            <div class="blog-header-widget__item">Путешествие</div>
+            <div class="blog-header-widget__item">Истории</div>
+            <div class="blog-header-widget__item">Достопримечательности</div>
+            <div class="blog-header-widget__item">Места</div>
+            <div class="blog-header-widget__item">Лайф-хаки</div>
+        </div>
+        <div class="blog-search">
+            <input type="text" placeholder="Начните вводить название.." class="blog-search__input">
+            <button class="blog-search__button"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
 	</div>
 
 	<div class="l-blog-layout">
 		<div class="l-blog-layout__sidebar">
-            <div class="sidebar-search">
-                <input type="text" placeholder="Поиск.." class="sidebar-search__input">
-                <button class="sidebar-search__button"><i class="fa fa-search" aria-hidden="true"></i></button>
-            </div>
             <div class="blog-side-widget">
                 <div class="blog-side-widget__header">Разделы</div>
                 <div class="blog-side-widget__item">Жизнь</div>
@@ -57,6 +63,10 @@
                         <div class="blog-article-preview__filter">
                             <div class="blog-article-preview__title">
                                 Какое-то название статьи
+                            </div>
+                            <div class="blog-article-preview__tags">
+                                <span>#Выживание</span>
+                                <span>#Достопримечательности</span>
                             </div>
                             <div class="blog-article-preview__info">
                                 <span><i style="margin-right: 5px;" class="fa fa-user"></i>Марк Партола</span>
