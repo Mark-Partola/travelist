@@ -2,3 +2,4 @@
 /node_modules
 /server/public/assets/bundle.js
 /server/public/assets/css
+/server/public/assets/js

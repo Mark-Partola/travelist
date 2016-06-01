@@ -18,19 +18,24 @@
   background-image: url(https://www.google.ru/logos/doodles/2016/childrens-day-2016-6290263691493376-hp.jpg);
   background-size: cover;
 
+  position: relative;
+
   &__filter {
-    -webkit-filter: blur(100px);
+    height: 100%;
   }
 
   &__title {
-
+    padding: 3px 5px;
+    background-color: rgba(0,0,0,.5);
   }
 
   &__description {
-
+    padding: 3px 5px;
+    background-color: rgba(0,0,0,.5);
   }
 
   &__counter {
-
+    padding: 3px 5px;
+    background-color: rgba(0,0,0,.5);
   }
 }
