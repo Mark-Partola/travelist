@@ -11,10 +11,22 @@ module.exports = {
         controller: 'BlogController',
         action: 'getArticles'
     },
+    '/posts/:slug' : {
+        module: 'blog',
+        method: 'get',
+        controller: 'BlogController',
+        action: 'getArticle'
+    },
     '/user/:name' : {
         module: 'profile',
         method: 'get',
         controller: 'ProfileController',
         action: 'getProfile'
+    },
+    '/locations' : {
+        module: 'locations',
+        method: 'get',
+        controller: 'CountriesController',
+        action: 'getAll'
     }
 };

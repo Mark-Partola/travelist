@@ -1,0 +1,36 @@
+@import './common/base.scss';
+@import './blocks/page-header.scss';
+
+.l-page-location {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.country {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 200px;
+  flex-basis: 20%;
+  max-width: 50%;
+  flex-grow: 1;
+
+  background-image: url(https://www.google.ru/logos/doodles/2016/childrens-day-2016-6290263691493376-hp.jpg);
+  background-size: cover;
+
+  &__filter {
+    -webkit-filter: blur(100px);
+  }
+
+  &__title {
+
+  }
+
+  &__description {
+
+  }
+
+  &__counter {
+
+  }
+}

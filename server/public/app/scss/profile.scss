@@ -1,5 +1,6 @@
 @import './common/base.scss';
 @import './blocks/page-header.scss';
+@import './blocks/avatar.scss';
 
 .profile-head {
   height: 560px;
@@ -50,26 +51,6 @@
     font-size: 12px;
     text-align: center;
     padding: 5px;
-  }
-}
-
-.avatar {
-  margin: 0 auto;
-  width: 130px;
-  height: 130px;
-  overflow: hidden;
-  border-radius: 100%;
-  border: 2px solid #fff;
-  
-  &--article {
-	width: 70px;
-    height: 70px;
-    margin-bottom: 10px;
-    border: 1px solid #eee;
-  }
-
-  img {
-    width: 100%;
   }
 }
 

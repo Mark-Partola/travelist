@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "set NODE_ENV=development && babel-node ./server/index.js --presets es2015,stage-2"
+    "server": "set NODE_ENV=development && babel-node ./server/index.js --presets es2015,stage-2",
+    "front": "webpack --watch"
   },
   "author": "Mark Partola",
   "license": "ISC",

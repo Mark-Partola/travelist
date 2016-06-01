@@ -3,12 +3,14 @@ var path = require('path');
 
 ProfileExtract = new ExtractTextPlugin('./server/public/assets/css/profile.css');
 BlogExtract = new ExtractTextPlugin('./server/public/assets/css/blog.css');
+LocationsExtract = new ExtractTextPlugin('./server/public/assets/css/locations.css');
 
 module.exports = {
     entry: [
         "./server/public/app/app.js",
         "./server/public/app/scss/profile.scss",
-        "./server/public/app/scss/blog.scss"
+        "./server/public/app/scss/blog.scss",
+        "./server/public/app/scss/locations.scss"
     ],
     output: {
         filename: "./server/public/assets/bundle.js"
@@ -41,12 +43,20 @@ module.exports = {
                     "style-loader",
                     "css-loader!sass-loader"
                 )
+            },
+            {
+                test: /locations\.scss$/,
+                loader: LocationsExtract.extract(
+                    "style-loader",
+                    "css-loader!sass-loader"
+                )
             }
         ]
     },
 
     plugins: [
         ProfileExtract,
-        BlogExtract
+        BlogExtract,
+        LocationsExtract
     ]
 };
