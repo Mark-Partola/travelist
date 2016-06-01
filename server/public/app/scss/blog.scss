@@ -1,6 +1,7 @@
 @import './common/base.scss';
 @import './blocks/page-header.scss';
 @import './blocks/avatar.scss';
+@import './blocks/search.scss';
 
 .blog-header {
 	padding: 10px;
@@ -230,32 +231,6 @@
 		&:hover {
 			background-color: darken(#f8f8f8, 5%);
 		}
-	}
-}
-
-.blog-search {
-	display: flex;
-	flex-grow: 1;
-	margin-left: 10px;
-
-	&__input {
-		width: 100%;
-		border: 1px solid #6bd;
-		padding: 5px;
-		color: #666;
-		font-family: RobotoRegular, sans-serif;
-		outline: none;
-		font-size: 13px;
-	}
-
-	&__button {
-		border: none;
-		background-color: #7ac;
-		color: #fff;
-		padding: 5px;
-		width: 65px;
-		cursor: pointer;
-		outline: none;
 	}
 }
 

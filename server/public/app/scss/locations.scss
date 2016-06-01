@@ -1,5 +1,6 @@
 @import './common/base.scss';
 @import './blocks/page-header.scss';
+@import './blocks/search.scss';
 
 .l-categories {
   display: flex;
@@ -11,6 +12,7 @@
 .category-header {
   height: 60px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
 
@@ -21,12 +23,43 @@
     font-family: RobotoThin, sans-serif;
     font-weight: 300;
   }
+
+  &__search {
+    height: 35px;
+    width: 300px;
+    flex-grow: 0;
+    margin-left: 13px;
+  }
+
+  &__filter {
+    display: flex;
+  }
+
+  &__buttons {
+    display: flex;
+
+    button {
+      border: none;
+      background-color: $mainColor;
+      display: block;
+      color: #fff;
+      margin-left: 13px;
+      font-size: 12px;
+      cursor: pointer;
+
+      transition: background-color .2s;
+
+      &:hover {
+        background-color: lighten($mainColor, 5%);
+      }
+    }
+  }
 }
 
 .country {
   height: 225px;
-  flex-basis: 19.2%;
-  margin-bottom: 10px;
+  flex-basis: 19%;
+  margin-bottom: 13px;
   max-width: 50%;
   background-image: url(http://shooow.me/uploads/images/geo/c/149_390.jpg);
   background-size: cover;
@@ -68,7 +101,7 @@
     right: 0;
     padding: 5px 23px;
     font-size: 12px;
-    font-family: RobotoThin;
+    font-family: RobotoThin, sans-serif;
     background-color: rgba(0,0,0,.5);
   }
 }
