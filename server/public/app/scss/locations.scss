@@ -1,32 +1,58 @@
 @import './common/base.scss';
 @import './blocks/page-header.scss';
 
-.l-page-location {
+.l-categories {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
+  justify-content: space-between;
+}
+
+.category-header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  &__title {
+    margin: 0;
+    color: #555;
+    font-size: 30px;
+    font-family: RobotoThin, sans-serif;
+    font-weight: 300;
+  }
 }
 
 .country {
-  margin-right: 10px;
+  height: 225px;
+  flex-basis: 19.2%;
   margin-bottom: 10px;
-  height: 200px;
-  flex-basis: 20%;
   max-width: 50%;
-  flex-grow: 1;
-
-  background-image: url(https://www.google.ru/logos/doodles/2016/childrens-day-2016-6290263691493376-hp.jpg);
+  background-image: url(http://shooow.me/uploads/images/geo/c/149_390.jpg);
   background-size: cover;
-
   position: relative;
+  cursor: pointer;
+
+  &:hover .country__filter{
+    background-color: rgba(0,0,0,.3);
+  }
 
   &__filter {
     height: 100%;
+    transition: background-color .3s;
   }
 
   &__title {
-    padding: 3px 5px;
+    color: #fff;
+    font-family: RobotoRegular, sans-serif;
+    font-size: 19px;
+    text-transform: uppercase;
+    padding: 10px;
     background-color: rgba(0,0,0,.5);
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 25px;
   }
 
   &__description {
@@ -35,7 +61,14 @@
   }
 
   &__counter {
-    padding: 3px 5px;
+    color: #fff;
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 71px;
+    right: 0;
+    padding: 5px 23px;
+    font-size: 12px;
+    font-family: RobotoThin;
     background-color: rgba(0,0,0,.5);
   }
 }
