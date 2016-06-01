@@ -22,5 +22,11 @@ module.exports = {
         method: 'get',
         controller: 'ProfileController',
         action: 'getProfile'
+    },
+    '/locations' : {
+        module: 'locations',
+        method: 'get',
+        controller: 'CountriesController',
+        action: 'getAll'
     }
 };
